@@ -667,7 +667,7 @@ svg path:hover {
     width: 100%;
   }
   .section-header {
-    margin: 0 auto 100px;
+    margin: 0 auto 90px;
   }
   .btn, .portfolio-btn {
     font-size: 20px;
@@ -704,7 +704,7 @@ svg path:hover {
     margin-bottom: 60px;
   }
   .skills-header {
-    margin: 0 auto 100px;
+    margin: 0 auto 90px;
   }
   .skills-items {
     -ms-flex-wrap: wrap;
