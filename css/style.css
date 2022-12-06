@@ -669,6 +669,10 @@ svg path:hover {
   .section-header {
     margin: 0 auto 90px;
   }
+  .section-title {
+    -webkit-transform: translate(-50%, 10%);
+            transform: translate(-50%, 10%);
+  }
   .btn, .portfolio-btn {
     font-size: 20px;
     display: -webkit-box;
