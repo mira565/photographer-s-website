@@ -1,0 +1,46 @@
+$beige:#BDAE82;
+$size:20px;
+$font: 'Inter', sans-serif;
+$block_md:991px;
+$block_sm:768px;
+
+
+@mixin center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+@mixin space-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+@mixin font($f, $color, $line-h) {
+    font-size: $f;
+    color:$color;
+    line-height: $line-h;
+}
+
+@mixin wrap {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@mixin md-block() {
+    @media screen and (max-width:$block_md) {
+        @content;
+        
+    }
+}
+
+@mixin sm-block() {
+    @media screen and (max-width:$block_sm) {
+        @content;
+        
+    }
+}
