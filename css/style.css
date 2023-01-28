@@ -90,7 +90,6 @@ button {
   position: absolute;
   z-index: 1000;
 }
-
 .header-wrapper {
   padding: 20px 0px;
   display: -webkit-box;
@@ -109,13 +108,16 @@ button {
   display: -ms-flexbox;
   display: flex;
 }
-
 .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
   margin-right: 31px;
+}
+.nav-menu_item-link {
+  color: white;
+  text-decoration: none;
 }
 
 .languages {
@@ -126,11 +128,6 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-}
-
-.nav-menu_item-link {
-  color: white;
-  text-decoration: none;
 }
 
 .language {
@@ -157,26 +154,19 @@ button {
   max-width: 100%;
   background-position: center;
 }
-
 .hero-wrapper {
   padding: 250px 0 0 80px;
 }
-
 .hero-title {
   font-size: 60px;
   line-height: 2;
   margin-bottom: 10px;
 }
-
 .hero-text {
   font-size: 20px;
   line-height: 2;
   max-width: 470px;
   margin-bottom: 25px;
-}
-
-section {
-  padding-top: 100px;
 }
 
 .section-header {
@@ -185,7 +175,7 @@ section {
   display: flex;
   position: relative;
   width: 50%;
-  margin: 0 auto 60px;
+  margin: 100px auto 60px;
   margin-bottom: 100px;
   text-align: center;
   -webkit-box-align: center;
@@ -195,9 +185,7 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
 }
-
-.section-header::before,
-.section-header::after {
+.section-header::before, .section-header::after {
   position: absolute;
   content: " ";
   top: 50%;
@@ -205,15 +193,12 @@ section {
   width: 274px;
   height: 2px;
 }
-
 .section-header::before {
   left: 0;
 }
-
 .section-header::after {
   right: 0;
 }
-
 .section-title {
   position: absolute;
   font-size: 40px;
@@ -236,22 +221,18 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 .skills-item {
   text-align: center;
   padding: 0 20px 8px;
 }
-
 .skills-item_icon {
   margin-bottom: 50px;
 }
-
 .skills-item_title {
   font-family: "Inter";
   font-size: 20px;
   margin-bottom: 28px;
 }
-
 .skills-item_text {
   min-width: 280px;
 }
@@ -286,7 +267,6 @@ section {
   gap: 25px;
   padding-top: 60px;
 }
-
 .pictures-pic {
   height: 560px;
 }
@@ -317,7 +297,6 @@ section {
           align-items: center;
   margin-bottom: 100px;
 }
-
 .prices-items_item {
   border: 1px solid var(--beige-color);
   text-align: center;
@@ -374,7 +353,6 @@ h4 {
   height: 50px;
   margin-bottom: 20px;
 }
-
 .input::-webkit-input-placeholder {
   color: var(--beige-color);
   font-family: inherit;
@@ -382,7 +360,6 @@ h4 {
   line-height: 2;
   padding-left: 20px;
 }
-
 .input::-moz-placeholder {
   color: var(--beige-color);
   font-family: inherit;
@@ -390,7 +367,6 @@ h4 {
   line-height: 2;
   padding-left: 20px;
 }
-
 .input:-ms-input-placeholder {
   color: var(--beige-color);
   font-family: inherit;
@@ -398,7 +374,6 @@ h4 {
   line-height: 2;
   padding-left: 20px;
 }
-
 .input::-ms-input-placeholder {
   color: var(--beige-color);
   font-family: inherit;
@@ -406,7 +381,6 @@ h4 {
   line-height: 2;
   padding-left: 20px;
 }
-
 .input::placeholder {
   color: var(--beige-color);
   font-family: inherit;
@@ -414,7 +388,6 @@ h4 {
   line-height: 2;
   padding-left: 20px;
 }
-
 .input-message {
   height: 100px;
   padding-bottom: 50px;
@@ -432,7 +405,6 @@ h4 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 .icons-dates {
   width: 188px;
   height: 50px;
@@ -504,11 +476,11 @@ svg path:hover {
   .section {
     padding-top: 80px;
   }
+  .section-header {
+    margin: 50px auto 70px;
+  }
   .img {
     width: 100%;
-  }
-  .section-header {
-    margin: 0 auto 70px;
   }
   .btn, .btn-light {
     font-size: 20px;
@@ -551,7 +523,7 @@ svg path:hover {
     padding-bottom: 32px;
   }
   .skills-header {
-    margin: 0 auto 45px;
+    margin: 50px auto 45px;
   }
   .skills-items {
     display: -webkit-box;
@@ -567,7 +539,7 @@ svg path:hover {
   .skills-item {
     width: 40%;
   }
-  .skills-item_icon {
+  .skills-item__icon {
     margin-bottom: 30px;
   }
   .box {
@@ -663,11 +635,11 @@ svg path:hover {
   .section {
     padding-top: 80px;
   }
+  .section-header {
+    margin: 40px auto 80px;
+  }
   .img {
     width: 100%;
-  }
-  .section-header {
-    margin: 0 auto 140px;
   }
   .btn, .portfolio-btn {
     font-size: 20px;
@@ -690,9 +662,6 @@ svg path:hover {
     background-size: cover;
     background-position: -500px;
   }
-  .nav-menu {
-    display: none;
-  }
   .hero-title {
     font-size: 32px;
     line-height: 2;
@@ -703,8 +672,19 @@ svg path:hover {
     max-width: 390px;
     margin-bottom: 60px;
   }
+  .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav-menu_item {
+    padding: 10px 0;
+  }
   .skills-header {
-    margin: 0 auto 140px;
+    margin: 50px auto 80px;
   }
   .skills-items {
     -ms-flex-wrap: wrap;
@@ -722,7 +702,7 @@ svg path:hover {
   .skills-item_icon {
     margin-bottom: 30px;
   }
-  .skills-item_text {
+  .skills-item__text {
     line-height: 22px;
   }
   .box {
@@ -758,6 +738,9 @@ svg path:hover {
     top: 100px;
     left: 80px;
   }
+  .prices {
+    max-width: 100%;
+  }
   .prices-items_item {
     padding: 40px 65px 40px 65px;
     margin-bottom: 20px;
@@ -777,9 +760,6 @@ svg path:hover {
   }
   .btn-contact {
     margin: 0 auto;
-  }
-  .prices {
-    max-width: 100%;
   }
   .icons {
     -webkit-box-orient: vertical;
