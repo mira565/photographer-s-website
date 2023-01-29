@@ -131,6 +131,39 @@ button {
     font-weight: 700;
 }
 
+.night_mode {
+    width: 30px;
+    height: 30px;
+    background-color: #e6e6e6;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+.toggle_circle {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 54px;
+    margin: 0 5px;
+    position: absolute;
+    transition: .2s;
+}
+.light-theme {
+    color:#000;
+    background: #fff;
+}
+.light-theme:hover {
+    color: #000;
+}
+.light-theme::before,
+.light-theme::after {
+    background: #000;
+}
 
 .active {
     color: var(--beige-color);
@@ -150,6 +183,7 @@ button {
     padding-top: 0;
      max-width: 100%;  
      background-position: center;
+     margin-bottom: 100px;
      &-wrapper {
         padding: 250px 0 0 80px; 
      }
@@ -169,12 +203,11 @@ button {
 
 .section {
     &-header {
+        padding-top: 100px;
         display: flex;
         position: relative;
         width: 50%;
-        margin: 100px auto 60px;
-        // height: 80px;
-        margin-bottom: 100px;
+        margin: 0 auto 60px;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -201,7 +234,7 @@ button {
         color: var(--beige-color);
         padding: 0 18px;
         background-color: black;
-        top: 0&;
+        top: 0;
         left: 50%;
         transform: translate(-50%, 0% );
         z-index: 100;
@@ -242,6 +275,9 @@ button {
     flex-wrap: wrap;
 }
 
+.portfolio {
+    padding-top:100px
+}
 
 .pictures {
     display:flex;
@@ -250,31 +286,48 @@ button {
     gap:25px;
     padding-top: 60px;
     &-pic {
-        height: 560px;  
-    }   
+        height: 560px; 
+        transition: all .2s ease-in-out;
+   &:hover {
+        transform: scale(0.9);
+        border-radius: 10%;
+    } 
+}
 }
 
-
+.video {
+    padding-top: 100px;
+}
 .videos {
     background-image: url(../assets/JPG/video.jpg);
     height: 705px;
     position: relative;
 }
-.recoder {
+.player {
     position: absolute;
     left: 600px;
     top: 250px;
     width: 100px;
     height: 100px;
+    transition: 0.3s ease-in-out;
+    
 } 
+
+.player {
+    transition: 0.3s ease-in-out;
+}
+.player:hover {
+    color: var(--beige-color);
+    cursor: pointer;
+}
 
 
 .prices {
+    padding: 100px 0 100px;
     &-items {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 100px; 
         &_item {
             border: 1px solid var(--beige-color);
             text-align: center;
@@ -290,10 +343,6 @@ button {
 
 }
 
-h3 {
-    color:white;
-    
-}
 h4 {
     color:var(--beige-color);
     margin: 20px 0 20px;
@@ -310,8 +359,7 @@ h4 {
     background: url(../assets/JPG/contacts.jpg) no-repeat center;
     height: 700px;
     background-size: cover;
-    margin-bottom: 30px;
-    
+    margin-bottom: 30px;  
 }
 
 .wrapper-contact {
@@ -414,6 +462,29 @@ svg path:hover {
     ;
 }
 
+.burger {
+    display: none;
+    width: 50px;
+    height: 28px;
+    position: relative;
+    margin-left: 15px;
+    &-line {
+        background-color: #fff;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        &__first {
+            top:0;
+        }
+        &__second {
+            top: 50%;
+        }
+        &__third {
+            bottom: 0;
+        }
+    }
+}
+
 
 
 
@@ -495,9 +566,6 @@ svg path:hover {
         gap: 5px;
     }
 
-    .portfolio {
-        width: 40%;
-    }
 
 
     .prices-items {
@@ -510,9 +578,10 @@ svg path:hover {
         background-size: cover;
         background-position: 10px;
         position: relative;
+        
     }
 
-    .recoder, .player {
+     .player {
         width: 75px;
         height: 75px;  
         position: absolute;
@@ -576,7 +645,61 @@ svg path:hover {
 
 /* Phones */
 
-@media screen  and (max-width: 769px) {
+@media screen  and (max-width: 768px) {
+
+    .burger {
+        display: block;
+    }
+
+    .nav {
+        position: fixed;
+        z-index: 100;
+        top:0;
+        right: 0;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        transition: .3s;
+        transform: translateX(110%) ;
+        &-menu { 
+            flex-direction: column;
+            background-color: #000;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            &_active {
+                transform: translateX(0);
+            }
+        }
+    }
+    
+    
+    .header {
+        &-nav {
+            &__close {
+                width: 45px;
+                height: 45px;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                &-line {
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 50%;
+                }
+                &-line:first-child {
+                    transform: translateY(-50%) rotate(45deg);
+                }
+                &-line:last-child {
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+            }
+        }
+    }
 
     .hero-container {
         padding: 100px 0 0 20px;
@@ -621,13 +744,7 @@ svg path:hover {
     }
         
 
-    .nav-menu { 
-        display: flex;
-        align-items: center;
-        &_item {
-            padding: 10px 0;
-        }
-    }
+    
 
     .skills{
         &-header {
@@ -668,6 +785,7 @@ svg path:hover {
     .pictures-pic {
         width: 350px;
     }
+    
 
     .prices-items {
         flex-wrap: wrap;
@@ -681,12 +799,12 @@ svg path:hover {
         height: 405px;
     }
 
-    .recoder, .player {
+     .player {
         width: 65px;
         height: 65px;  
          position: absolute;
         top: 100px;
-        left: 80px;          
+        left: 80px;         
     }
 
     .prices {
